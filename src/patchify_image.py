@@ -65,7 +65,7 @@ def create_patches(
 
 if __name__ == '__main__':
     create_patches(
-        ['/content/SRCNN-keras/dataset/T91/T91'],
-        '/content/SRCNN-keras/dataset/t91_hr_patches',
-        '/content/SRCNN-keras/dataset/t91_lr_patches'
+        ['./input/T91'],
+        './input/t91_hr_patches',
+        './input/t91_lr_patches'
     )
