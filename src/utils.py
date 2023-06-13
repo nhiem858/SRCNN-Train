@@ -31,7 +31,7 @@ def save_plot(train_loss, val_loss, train_psnr, val_psnr):
     plt.xlabel('Epochs')
     plt.ylabel('Loss')
     plt.legend()
-    plt.savefig('../outputs/loss.png')
+    plt.savefig('/content/SRCNN-Train/outputs/loss.png')
     plt.close()
     # PSNR plots.
     plt.figure(figsize=(10, 7))
@@ -40,13 +40,13 @@ def save_plot(train_loss, val_loss, train_psnr, val_psnr):
     plt.xlabel('Epochs')
     plt.ylabel('PSNR (dB)')
     plt.legend()
-    plt.savefig('../outputs/psnr.png')
+    plt.savefig('/content/SRCNN-Train/outputs/psnr.png')
     plt.close()
 
 def save_model_state(model):
     # save the model to disk
     print('Saving model...')
-    torch.save(model.state_dict(), '../outputs/model.pth')
+    torch.save(model.state_dict(), '/content/SRCNN-Train/outputs/model.pth')
 def save_model(epochs, model, optimizer, criterion):
     """
     Function to save the trained model to disk.
@@ -57,7 +57,7 @@ def save_model(epochs, model, optimizer, criterion):
                 'model_state_dict': model.state_dict(),
                 'optimizer_state_dict': optimizer.state_dict(),
                 'loss': criterion,
-                }, f"../outputs/model_ckpt.pth")
+                }, f"/content/SRCNN-Train/outputs/model_ckpt.pth")
     
 def save_validation_results(outputs, epoch, batch_iter):
     """
@@ -65,5 +65,5 @@ def save_validation_results(outputs, epoch, batch_iter):
     """
     save_image(
         outputs, 
-        f"../outputs/valid_results/val_sr_{epoch}_{batch_iter}.png"
+        f"/content/SRCNN-Train/outputs/valid_results/val_sr_{epoch}_{batch_iter}.png"
     )
