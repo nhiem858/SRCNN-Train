@@ -22,7 +22,7 @@ if args['scale_factor'] == '2x':
     scale_factor = 0.5
     os.makedirs('/content/SRCNN-Train/input/test_bicubic_rgb_2x', exist_ok=True)
     save_path_lr = '/content/SRCNN-Train/input/test_bicubic_rgb_2x'
-    os.makedirs('/content/SRCNN-Traininput/test_hr', exist_ok=True)
+    os.makedirs('/content/SRCNN-Train/input/test_hr', exist_ok=True)
     save_path_hr = '/content/SRCNN-Train/input/test_hr'
 if args['scale_factor'] == '3x':
     scale_factor = 0.333
