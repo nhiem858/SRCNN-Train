@@ -4,7 +4,7 @@ import os
 import argparse
 # Construct the argument parser and parse the command line arguments.
 parser = argparse.ArgumentParser()
-parser.add_argument('-p', '--path', default='./input/Set14/original', 
+parser.add_argument('-p', '--path', default='/content/drive/input/Set14/original', 
                     nargs='+',
                     help='path to the high-res images to convert to low-res')
 parser.add_argument('-s', '--scale-factor', dest='scale_factor', default='2x', 
@@ -20,22 +20,22 @@ print(len(images))
 # Select scaling-factor and set up directories according to that.
 if args['scale_factor'] == '2x':
     scale_factor = 0.5
-    os.makedirs('./input/test_bicubic_rgb_2x', exist_ok=True)
-    save_path_lr = './input/test_bicubic_rgb_2x'
-    os.makedirs('./input/test_hr', exist_ok=True)
-    save_path_hr = './input/test_hr'
+    os.makedirs('/content/drive/input/test_bicubic_rgb_2x', exist_ok=True)
+    save_path_lr = '/content/drive/input/test_bicubic_rgb_2x'
+    os.makedirs('/content/drive/input/test_hr', exist_ok=True)
+    save_path_hr = '/content/drive/input/test_hr'
 if args['scale_factor'] == '3x':
     scale_factor = 0.333
-    os.makedirs('./input/test_bicubic_rgb_3x', exist_ok=True)
-    os.makedirs('./input/test_hr', exist_ok=True)
-    save_path_lr = './input/test_bicubic_rgb_3x'
-    save_path_hr = './input/test_hr'
+    os.makedirs('/content/drive/input/test_bicubic_rgb_3x', exist_ok=True)
+    os.makedirs('/content/drive/input/test_hr', exist_ok=True)
+    save_path_lr = '/content/drive/input/test_bicubic_rgb_3x'
+    save_path_hr = '/content/drive/input/test_hr'
 if args['scale_factor'] == '4x':
     scale_factor = 0.25
-    os.makedirs('./input/test_bicubic_rgb_4x', exist_ok=True)
-    os.makedirs('./input/test_hr', exist_ok=True)
-    save_path_lr = './input/test_bicubic_rgb_4x'
-    save_path_hr = './input/test_hr'
+    os.makedirs('/content/drive/input/test_bicubic_rgb_4x', exist_ok=True)
+    os.makedirs('/content/drive/input/test_hr', exist_ok=True)
+    save_path_lr = '/content/drive/input/test_bicubic_rgb_4x'
+    save_path_hr = '/content/drive/input/test_hr'
 print(f"Scaling factor: {args['scale_factor']}")
 print(f"Low resolution images save path: {save_path_lr}")
 for image in images:
