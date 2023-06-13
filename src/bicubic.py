@@ -28,8 +28,8 @@ if args['scale_factor'] == '3x':
     scale_factor = 0.333
     os.makedirs('./input/test_bicubic_rgb_3x', exist_ok=True)
     os.makedirs('./input/test_hr', exist_ok=True)
-    save_path_lr = '../input/test_bicubic_rgb_3x'
-    save_path_hr = '../input/test_hr'
+    save_path_lr = './input/test_bicubic_rgb_3x'
+    save_path_hr = './input/test_hr'
 if args['scale_factor'] == '4x':
     scale_factor = 0.25
     os.makedirs('./input/test_bicubic_rgb_4x', exist_ok=True)
