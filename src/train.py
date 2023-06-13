@@ -27,12 +27,12 @@ epochs = args['epochs'] # Number of epochs to train the SRCNN model for.
 lr = 0.001 # Learning rate.
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 # Constants
-TRAIN_LABEL_PATHS = '/content/drive/input/t91_hr_patches'
-TRAN_IMAGE_PATHS = '/content/drive/input/t91_lr_patches'
-VALID_LABEL_PATHS = '/content/drive/input/test_hr'
-VALID_IMAGE_PATHS = '/content/drive/input/test_bicubic_rgb_2x'
+TRAIN_LABEL_PATHS = '/content/SRCNN-Train/input/t91_hr_patches'
+TRAN_IMAGE_PATHS = '/content/SRCNN-Train/input/t91_lr_patches'
+VALID_LABEL_PATHS = '/content/SRCNN-Train/input/test_hr'
+VALID_IMAGE_PATHS = '/content/SRCNN-Train/input/test_bicubic_rgb_2x'
 SAVE_VALIDATION_RESULTS = True
-os.makedirs('/content/drive/outputs/valid_results', exist_ok=True)
+os.makedirs('/content/SRCNN-Train/outputs/valid_results', exist_ok=True)
 
 
 # Initialize the model.
