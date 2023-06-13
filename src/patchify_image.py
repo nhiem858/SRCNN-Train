@@ -65,7 +65,7 @@ def create_patches(
 
 if __name__ == '__main__':
     create_patches(
-        ['./input/T91'],
-        './input/t91_hr_patches',
-        './input/t91_lr_patches'
+        ['/content/drive/input/T91'],
+        '/content/drive/input/t91_hr_patches',
+        '/content/drive/input/t91_lr_patches'
     )
